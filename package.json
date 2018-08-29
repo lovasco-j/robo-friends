@@ -2,7 +2,9 @@
   "name": "robo-friends",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://lovasco-j.github.io/robo-friends",
   "dependencies": {
+    "gh-pages": "^1.2.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-redux": "^5.0.7",
@@ -12,6 +14,8 @@
     "tachyons": "^4.10.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
