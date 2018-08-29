@@ -7,12 +7,12 @@ import {
     REQUEST_ROBOTS_FAILED,
 } from './constants';
 
-const initialState = {
+const initialSearchState = {
     robots: [],
     searchField: '',
 };
 
-export const searchRobots = (state = initialState, action= {}) => {
+export const searchRobots = (state = initialSearchState, action= {}) => {
     switch(action.type) {
         case CHANGE_SEARCH_FIELD:
             return Object.assign({}, state, {searchField: action.payload});
@@ -21,13 +21,13 @@ export const searchRobots = (state = initialState, action= {}) => {
     }
 }
 
-const initialStateSearch = {
+const initialRequestState = {
     isPending: false,
     robots: [],
     error: false,
 };
 
-export const requestRobots = (state = initialStateSearch, action = {}) => {
+export const requestRobots = (state = initialRequestState, action = {}) => {
     switch( action.type ) {
         case REQUEST_ROBOTS_PENDING:
             return Object.assign({}, state, {isPending: true});
