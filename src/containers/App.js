@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import CardList from '../components/CardList';
-import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
+import SearchBox from '../containers/SearchBox';
 import ErrorBoundary from '../containers/ErrorBoundary';
 import './App.css'
 
