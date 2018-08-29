@@ -1,7 +1,7 @@
 @font-face {
     font-display: swap;
     font-family: "SEGA LOGO FONT";
-    src: url("../fonts/SEGA.woff") format("woff"), url("../fonts/SEGA.ttf") format("truetype"), url("../fonts/SEGA.svg#SEGA") format("svg");
+    src: url("../fonts/SEGA.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
