@@ -11,19 +11,19 @@ class Main extends Component {
         this.props.onRequestRobots();
     }
 
+    filterRobots = () => {
+        return this.props.robots.filter((robot) => {
+            return robot.name.toLowerCase().includes(this.props.searchField.toLowerCase())
+        });
+    }
+
     render() {
         const {
-            searchField,
             onSearchChange,
             robots,
             isPending,
             error
         } = this.props;
-
-        let filterRobots = robots.filter((robot) => {
-            return robot.name.toLowerCase().includes(searchField.toLowerCase())
-        });
-
 
         if (isPending) {
             return (<div className="tc">
@@ -39,7 +39,7 @@ class Main extends Component {
                     <SearchBox onSearchChange={onSearchChange}/>
                     <Scroll>
                         <ErrorBoundary>
-                            <CardList robots={filterRobots}/>
+                            <CardList robots={this.filterRobots()}/>
                         </ErrorBoundary>
                     </Scroll>
                 </div>
