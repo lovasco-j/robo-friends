@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import Counter from '../components/Counter';
 import CardList from '../components/CardList';
 import Scroll from '../components/Scroll';
 import SearchBox from '../containers/SearchBox';
@@ -58,6 +59,7 @@ class App extends Component {
             return (
                 <div className="tc">
                     <h1>RoboFriends</h1>
+                    <Counter/>
                     <SearchBox onSearchChange={onSearchChange}/>
                     <Scroll>
                         <ErrorBoundary>
