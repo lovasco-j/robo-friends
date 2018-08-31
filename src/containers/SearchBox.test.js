@@ -14,7 +14,7 @@ it('<SearchBox> should call the props.onSearchChange on change', () => {
 
     expect(mockOnSearchChange).toBeCalled();
     expect(mockOnSearchChange.mock.calls.length).toEqual(1);
-    // calls is an array of arguments arrays for every time the mock() was called.
+    // calls is an array of argument arrays for every time the mock() was called.
     expect(mockOnSearchChange.mock.calls[0][0])
         .toEqual({event: { target: { value: 'h'} } });
 
